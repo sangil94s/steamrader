@@ -3,3 +3,6 @@
 - 스팀 일부 게임을 할인하는지 보여주는 목적으로 진행하는 프로젝트 입니다.
 
 - 본 프로젝트는 수익화의 목적이 없으며 개인 학습이 주 목적입니다.
+
+
+[Favicon 출처](https://www.flaticon.com/free-icon-font/shopping-bag_3916639?related_id=3916639)
