@@ -19,11 +19,11 @@ export default async function CardList() {
   const CardLists = await fetchCardList();
 
   return (
-    <div className="grid grid-cols-4 justify-items-center gap-2">
+    <div className="grid grid-cols-1 justify-items-center gap-2 lg:grid-cols-4">
       {CardLists &&
         CardLists.map((item: ITypes) => (
           <div
-            className="border border-slate-200 rounded-lg w-full flex items-center gap-4 hover:bg-gray-400 transition"
+            className="border border-slate-200 rounded-lg w-max flex items-center gap-4 hover:bg-gray-400 transition lg:w-full"
             key={item.id}
           >
             <Image
@@ -34,11 +34,11 @@ export default async function CardList() {
               className="m-2 rounded-2xl object-cover"
             />
 
-            <section className="flex flex-col justify-between m-auto">
+            <section className="flex flex-col justify-between m-auto w-full">
               <h1 className="text-white text-center font-bold">게임 명 : {item.id}</h1>
-              <div className="flex items-center text-sm gap-3">
-                <p className="text-red-600 text-center font-bold">할인율 : 20% </p>
-                <p className="text-red-600 text-center font-bold">최종 가격 : 20,000 원</p>
+              <div className="flex items-center text-sm gap-3 m-auto">
+                <p className="text-red-600 text-xs text-center font-bold">할인율 : 20% </p>
+                <p className="text-red-600 text-xs text-center font-bold">최종 가격 : 20,000 원</p>
                 <Link href="https://www.naver.com" target="_blank">
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
                 </Link>
