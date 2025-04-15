@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function page() {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-red-600 text-2xl font-bold">사이트 이용 참고</h1>
+    <div className="w-full h-max flex flex-col justify-center items-center">
+      <h1 className="text-red-600 text-2xl text-center font-bold">사이트 이용 참고</h1>
 
       <p className="text-white font-bold py-4">다음의 사례는 등장하지 않습니다</p>
 
