@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function page() {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-red-600 text-xl font-bold">사이트 이용 참고</h1>
+    <div className="w-full min-h-screen flex flex-col justify-center items-center">
+      <h1 className="text-red-600 text-2xl font-bold">사이트 이용 참고</h1>
 
       <p className="text-white font-bold py-4">다음의 사례는 등장하지 않습니다</p>
 
@@ -12,7 +12,7 @@ export default function page() {
       <p className="text-white font-bold py-4">2. 태그에 선정적 이 존재할 경우</p>
       <Link href="https://store.steampowered.com/charts/topselling/KR" target="_blank" className="text-white font-bold">
         {' '}
-        기준은 여기를 참고합니다 [링크 : 바로 가기]
+        🌐 기준은 여기를 참고합니다 [링크 : 바로 가기]
       </Link>
     </div>
   );
