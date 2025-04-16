@@ -12,9 +12,9 @@ export async function GET() {
     const appListJson = await appListRes.json();
 
     const apps = appListJson.applist.apps as { appid: number; name: string }[];
-    const filteredApps = apps.filter(app => app.name.trim() !== '' && app.appid >= 100000).slice(0, 30000);
+    const filteredApps = apps.filter(app => app.name.trim() !== '' && app.appid >= 100000).slice(0, 15000);
 
-    const limit = pLimit(120);
+    const limit = pLimit(80);
 
     const results = await Promise.all(
       filteredApps.map(app =>
@@ -36,7 +36,7 @@ export async function GET() {
               return null;
             }
             const price = data.data.price_overview;
-            if (price.discount_percent > 20) {
+            if (price.discount_percent > 10) {
               return {
                 appid: app.appid,
                 name: data.data.name,
