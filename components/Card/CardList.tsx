@@ -4,42 +4,47 @@ import Link from 'next/link';
 import { AiOutlineGlobal } from 'react-icons/ai';
 
 const fetchCardList = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'no-store' });
+  const res = await fetch(`http://localhost:3000/api/uses`, { cache: 'no-store' });
   if (!res.ok) throw new Error('데이터 호출 실패');
   return res.json();
 };
 
-interface ITypes {
-  userId: number;
+export interface DiscountedGame {
   id: number;
-  title: string;
-  body: string;
+  name: string;
+  headerImage: string;
+  appid: number;
+  discountPercent: number;
+  initialFormatted: string;
+  finalFormatted: string;
+  createDate: string;
 }
+
 export default async function CardList() {
   const CardLists = await fetchCardList();
 
   return (
     <div className="grid grid-cols-1 justify-items-center gap-2 lg:grid-cols-4">
       {CardLists &&
-        CardLists.map((item: ITypes) => (
+        CardLists?.data.map((item: DiscountedGame) => (
           <div
             className="border border-slate-200 rounded-lg w-max flex items-center gap-4 hover:bg-gray-400 transition lg:w-full"
             key={item.id}
           >
             <Image
-              src={'/temps.png'}
+              src={item.headerImage}
               width={90}
               height={90}
               alt="썸네일 이미지"
               className="m-2 rounded-2xl object-cover"
             />
 
-            <section className="flex flex-col justify-between m-auto w-full">
-              <h1 className="text-white text-center font-bold">게임 명 : {item.id}</h1>
+            <section className="flex flex-col justify-between w-full">
+              <h1 className="text-white text-center font-bold">{item.name}</h1>
               <div className="flex items-center text-sm gap-3 m-auto">
-                <p className="text-red-600 text-xs text-center font-bold">할인율 : 20% </p>
-                <p className="text-red-600 text-xs text-center font-bold">최종 가격 : 20,000 원</p>
-                <Link href="https://www.naver.com" target="_blank">
+                <p className="text-red-600 text-xs text-center font-bold">할인율 : {item.discountPercent} % </p>
+                <p className="text-red-600 text-xs text-center font-bold">최종 가격 : {item.finalFormatted} 원</p>
+                <Link href={`https://store.steampowered.com/app/${item.appid}`} target="_blank">
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
                 </Link>
               </div>
