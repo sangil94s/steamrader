@@ -18,3 +18,15 @@ model Alphas {
    id      Int     @id @default(autoincrement())
    bios     String
 }
+
+model Game {
+     id      Int     @id @default(autoincrement())
+     name String      @db.VarChar(100)
+     headerImage String @db.VarChar(200)
+     appid Int 
+     discountPercent Int
+     initialFormatted String @db.VarChar(40)
+     finalFormatted String @db.VarChar(40)
+     createDate   DateTime    @default(now())
+
+}
