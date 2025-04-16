@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '사이드 프로젝트',
-  description: '사이드 프로젝트',
+  title: '사이드 프로젝트 | Steam Rader',
+  description: '사이드 프로젝트 - 스팀 할인 정보를 가져오는 프로젝트',
 };
 
 export default function RootLayout({

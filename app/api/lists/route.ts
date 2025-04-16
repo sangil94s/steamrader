@@ -12,9 +12,13 @@ export async function GET() {
     const appListJson = await appListRes.json();
 
     const apps = appListJson.applist.apps as { appid: number; name: string }[];
-    const filteredApps = apps.filter(app => app.name.trim() !== '' && app.appid >= 100000).slice(0, 15000);
+    const filteredApps = apps
+      .filter(app => app.name.trim() !== '' && app.appid >= 100000 && app.appid <= 4000000)
+      .slice(0, 20000);
 
     const limit = pLimit(80);
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
     const results = await Promise.all(
       filteredApps.map(app =>
@@ -65,7 +69,13 @@ export async function GET() {
       finalFormatted: string;
     }[];
 
-    await prisma.game.deleteMany();
+    await prisma.game.deleteMany({
+      where: {
+        createDate: {
+          lt: sevenDaysAgo,
+        },
+      },
+    });
     await prisma.game.createMany({
       data: discountedGames.map(game => ({
         appid: game.appid,
