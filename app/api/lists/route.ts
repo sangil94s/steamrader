@@ -13,8 +13,8 @@ export async function GET() {
 
     const apps = appListJson.applist.apps as { appid: number; name: string }[];
     const filteredApps = apps
-      .filter(app => app.name.trim() !== '' && app.appid >= 100000 && app.appid <= 4000000)
-      .slice(0, 20000);
+      .filter(app => app.name.trim() !== '' && app.appid >= 1000000 && app.appid <= 1200001)
+      .slice(0, 200000);
 
     const limit = pLimit(80);
     const sevenDaysAgo = new Date();
