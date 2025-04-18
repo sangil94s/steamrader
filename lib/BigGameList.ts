@@ -23,6 +23,15 @@ export const bigGameAppIds = [
   2183900, // Warhammer 40,000: Space Marine 2
   2252570, // Football Manager 2024
   306130, // The Elder Scrolls® Online
+  489830, //The Elder Scrolls V: Skyrim Special Edition
+  1746860, //The Elder Scrolls V: Skyrim Anniversary Upgrade
+  377160, //Fallout 4
+  22380, // Fallout: New Vegas
+  22370, //Fallout 3: Game of the Year Edition
+  644930, //They Are Billions
+  323190, //프로스트펑크
+  1601580, //프로스트펑크2
+
   1940340, // Darkest Dungeon® II
   262060, //Darkest Dungeon®
   1245620, // Elden Ring
