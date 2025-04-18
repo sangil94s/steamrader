@@ -33,8 +33,8 @@ export default async function CardList() {
           >
             <Image
               src={item.headerImage}
-              width={90}
-              height={90}
+              width={80}
+              height={80}
               alt="썸네일 이미지"
               className="m-2 rounded-2xl object-cover"
             />
