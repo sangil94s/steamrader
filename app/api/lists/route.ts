@@ -75,6 +75,27 @@ export async function GET() {
       2519060, //Call of Duty®: Modern Warfare® III
       1985820, //Call of Duty®: Vanguard
       1985810, //Call of Duty®: Black Ops Cold War
+      1517290, //Battlefield™ 2042
+      1238810, //Battlefield™ V
+      782330, //DOOM Eternal
+      3017860, //DOOM: The Dark Ages
+      379720, //DOOM
+      601150, //Devil May Cry 5
+      524220, //NieR:Automata™
+      2420110, //Horizon Forbidden West™ Complete Edition
+      990080, //Hogwarts Legacy
+      2322010, //갓 오브 워 라그나로크
+      1593500, //God of War
+      1659420, //UNCHARTED™: 레거시 오브 시브즈 컬렉션
+      391540, //Undertale
+      1868140, //데이브 더 다이버
+      201810, //Wolfenstein: The New Order
+      612880, //Wolfenstein II: The New Colossus
+      1147560, //Skul: The Hero Slayer
+      2050650, //BIOHAZARD RE:4
+      1196590, //Biohazard Village
+      2124490, //SILENT HILL 2
+
       646570, //Slay the Spire
       287390, //Metro: Last Light Redux
       286690, //Metro 2033 Redux
