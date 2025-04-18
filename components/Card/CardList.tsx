@@ -24,7 +24,7 @@ export default async function CardList() {
   const CardLists = await fetchCardList();
 
   return (
-    <div className="grid grid-cols-1 justify-items-center gap-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-5">
       {CardLists &&
         CardLists?.data.map((item: DiscountedGame) => (
           <div
@@ -42,7 +42,7 @@ export default async function CardList() {
             <section className="flex flex-col justify-between w-full">
               <h1 className="text-white text-center font-bold">{item.name}</h1>
               <div className="flex items-center text-sm gap-3 m-auto">
-                <p className="text-red-600 text-xs text-center font-bold">할인율 : {item.discountPercent} % </p>
+                <p className="text-amber-400 text-center font-bold">할인율 : {item.discountPercent} % </p>
                 <p className="text-red-600 text-xs text-center font-bold">최종 가격 : {item.finalFormatted} 원</p>
                 <Link href={`https://store.steampowered.com/app/${item.appid}`} target="_blank">
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
