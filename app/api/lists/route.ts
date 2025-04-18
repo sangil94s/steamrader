@@ -95,7 +95,11 @@ export async function GET() {
       2050650, //BIOHAZARD RE:4
       1196590, //Biohazard Village
       2124490, //SILENT HILL 2
-
+      246620, // Plague Inc: Evolved
+      1465360, //SnowRunner
+      838380, // DEAD OR ALIVE 6
+      1364780, // Street Fighter 6
+      1778820, //TEKKEN 8
       646570, //Slay the Spire
       287390, //Metro: Last Light Redux
       286690, //Metro 2033 Redux
@@ -121,6 +125,8 @@ export async function GET() {
       2072450, //용과 같이8
       1235140, //용과 같이7 빛과 어둠의 행방
       653530, //Return of the Obra Dinn
+      1817190, // Marvel’s Spider-Man: Miles Morales
+      1627720, //Lies of P
     ];
 
     const apps = bigGameAppIds.map(appid => ({ appid }));

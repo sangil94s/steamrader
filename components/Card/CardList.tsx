@@ -33,10 +33,10 @@ export default async function CardList() {
           >
             <Image
               src={item.headerImage}
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               alt="썸네일 이미지"
-              className="m-2 rounded-2xl object-cover"
+              className="m-3 rounded-2xl object-cover"
             />
 
             <section className="flex flex-col justify-between w-full">
