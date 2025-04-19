@@ -132,4 +132,12 @@ export const bigGameAppIds = [
   2221490, //Tom Clancy’s The Division® 2
   105600, //테라리아
   1551360, // Forza Horizon 5
+  2669320, //EA SPORTS FC™ 25
+  2456740, //inZOI
+  960170, //DJMAX RESPECT V
+  1477590, //EZ2ON REBOOT : R
+  2358720, //검은 신화: 오공
+  2680010, //퍼스트 버서커: 카잔
+  359550, //Tom Clancy's Rainbow Six® Siege
+
 ];
