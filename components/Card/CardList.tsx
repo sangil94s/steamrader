@@ -44,7 +44,11 @@ export default async function CardList() {
               <div className="flex items-center text-sm gap-3 m-auto">
                 <p className="text-amber-400 text-center font-bold">할인율 : {item.discountPercent} % </p>
                 <p className="text-red-600 text-xs text-center font-bold">최종 가격 : {item.finalFormatted} 원</p>
-                <Link href={`https://store.steampowered.com/app/${item.appid}`} target="_blank">
+                <Link
+                  href={`https://store.steampowered.com/app/${item.appid}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
                 </Link>
               </div>
