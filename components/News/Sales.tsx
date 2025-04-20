@@ -5,7 +5,7 @@ export default function Sales() {
   return (
     <>
       <div>
-        <p className="text-white text-center font-bold py-4">
+        <p className="text-white text-center font-bold py-4 text-xs lg:text-base">
           🛒 임박한 할인 일정 - 창고지기 게임 축제 : 4월 21일 - 4월 28일
         </p>
       </div>

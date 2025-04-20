@@ -40,7 +40,7 @@ export default async function CardList() {
             />
 
             <section className="flex flex-col justify-between w-full">
-              <h1 className="text-white text-center font-bold">{item.name}</h1>
+              <h1 className="text-white text-center font-bold text-sm lg:text-base">{item.name}</h1>
               <div className="flex items-center text-sm gap-3 m-auto">
                 <p className="text-amber-400 text-center font-bold">할인율 : {item.discountPercent} % </p>
                 <p className="text-red-600 text-xs text-center font-bold">최종 가격 : {item.finalFormatted} 원</p>
