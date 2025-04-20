@@ -15,6 +15,7 @@ export interface DiscountedGame {
   headerImage: string;
   appid: number;
   discountPercent: number;
+  genres: string;
   initialFormatted: string;
   finalFormatted: string;
   createDate: string;
@@ -51,6 +52,9 @@ export default async function CardList() {
                 >
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
                 </Link>
+              </div>
+              <div>
+                <p className="text-red-600 text-xs text-center py-2">장르 : {item.genres}</p>
               </div>
             </section>
           </div>

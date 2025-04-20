@@ -29,6 +29,8 @@ export async function GET() {
             const detailJson = await detailRes.json();
             const data = detailJson[app.appid];
 
+            const genreList = data.data.genres?.map((genre: { description: string }) => genre.description) || [];
+            const genresString = genreList.join(', ');
             if (
               !data ||
               !data.success ||
@@ -48,6 +50,7 @@ export async function GET() {
                 discountPercent: price.discount_percent,
                 initialFormatted: price.initial_formatted,
                 finalFormatted: price.final_formatted,
+                genres: genresString,
               };
             }
 
@@ -65,6 +68,7 @@ export async function GET() {
       name: string;
       discountPercent: number;
       headerImage: string;
+      genres: string;
       initialFormatted: string;
       finalFormatted: string;
     }[];
@@ -82,6 +86,7 @@ export async function GET() {
         name: game.name,
         headerImage: game.headerImage,
         discountPercent: game.discountPercent,
+        genres: game.genres,
         initialFormatted: game.initialFormatted,
         finalFormatted: game.finalFormatted,
       })),

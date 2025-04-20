@@ -22,6 +22,6 @@ model Game {
      discountPercent Int
      initialFormatted String @db.VarChar(40)
      finalFormatted String @db.VarChar(40)
+     genres         String  @db.VarChar(50)
      createDate   DateTime    @default(now())
-
 }
