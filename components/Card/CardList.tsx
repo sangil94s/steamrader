@@ -49,6 +49,7 @@ export default async function CardList() {
                   href={`https://store.steampowered.com/app/${item.appid}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label='스팀 해당 상품 페이지로 이동'
                 >
                   <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
                 </Link>
