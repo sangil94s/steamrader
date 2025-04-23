@@ -6,7 +6,7 @@ import { AiOutlineGlobal } from 'react-icons/ai';
 const fetchCardList = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/uses`, { cache: 'no-store' });
   if (!res.ok) throw new Error('데이터 호출 실패');
-  return res.json();
+  return await res.json();
 };
 
 export interface DiscountedGame {
@@ -23,7 +23,6 @@ export interface DiscountedGame {
 
 export default async function CardList() {
   const CardLists = await fetchCardList();
-
   return (
     <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-5">
       {CardLists &&

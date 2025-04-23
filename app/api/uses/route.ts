@@ -4,7 +4,11 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const data = await prisma.game.findMany();
+    const data = await prisma.game.findMany({
+      orderBy: {
+        discountPercent: 'asc',
+      },
+    });
     return NextResponse.json({ data }, { status: 200 });
   } catch (e) {
     console.error(e);
