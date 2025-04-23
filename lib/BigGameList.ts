@@ -139,4 +139,9 @@ export const bigGameAppIds = [
   2358720, //검은 신화: 오공
   2680010, //퍼스트 버서커: 카잔
   359550, //Tom Clancy's Rainbow Six® Siege
+  1325200, //Nioh 2 – The Complete Edition
+  1623730, //Palworld
+  264710, //Subnautica
+  252490, //Rust
+  4000, //게리모드
 ];
