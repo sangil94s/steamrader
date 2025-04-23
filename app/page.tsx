@@ -8,7 +8,7 @@ export default function Home() {
       <Sales />
       <Select>
         <SelectTrigger className="w-[180px] m-2">
-          <SelectValue placeholder="Theme" />
+          <SelectValue placeholder="Temp-게임 장르 별 필터" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="light">Light</SelectItem>

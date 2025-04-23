@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: '사이드 프로젝트 | Steam Rader',
   description: '사이드 프로젝트 - 스팀 할인 정보를 가져오는 프로젝트',
   openGraph: {
-    title: "Steam Rader",
-    description: '개인프로젝트로 스팀 대작 게임 할인 정보를 보여줍니다'
-  }
+    title: 'Steam Rader',
+    description: '개인프로젝트로 스팀 대작 게임 할인 정보를 보여줍니다',
+  },
 };
 
 export default function RootLayout({
