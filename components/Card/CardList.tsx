@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineGlobal } from 'react-icons/ai';
+import NoData from '../Common/NoData';
 
 const fetchCardList = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/uses`, { cache: 'no-store' });
@@ -23,9 +24,10 @@ export interface DiscountedGame {
 
 export default async function CardList() {
   const CardLists = await fetchCardList();
+
   return (
     <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-5">
-      {CardLists &&
+      {CardLists?.data.length >= 1 ? (
         CardLists?.data.map((item: DiscountedGame) => (
           <div
             className="border border-slate-200 rounded-lg w-max flex items-center gap-4 hover:bg-gray-400 transition lg:w-full"
@@ -58,7 +60,10 @@ export default async function CardList() {
               </div>
             </section>
           </div>
-        ))}
+        ))
+      ) : (
+        <NoData />
+      )}
     </div>
   );
 }

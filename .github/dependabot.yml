@@ -9,7 +9,7 @@ updates:
     ignore:
       - dependency-name: 'next'
         versions: ['<15.4.0']
-      - dependency-name: 'react' 
+      - dependency-name: 'react'
         versions: ['<19.2.0']
-      - dependency-name: 'react-dom' 
+      - dependency-name: 'react-dom'
         versions: ['<19.2.0']
