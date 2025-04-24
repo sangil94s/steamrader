@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      prefix: '[Fix]'
+    ignore:
+      - dependency-name: 'next'
+        versions: ['<15.4.0']
+      - dependency-name: 'react' 
+        versions: ['<19.2.0']
+      - dependency-name: 'react-dom' 
+        versions: ['<19.2.0']
