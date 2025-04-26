@@ -7,7 +7,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ genr
     if (!genres) {
       return NextResponse.json({ error: '장르가 없습니다.' }, { status: 400 });
     }
-    const games = await prisma.game.findMany({
+    const data = await prisma.game.findMany({
       where: {
         genres: {
           contains: genres,
@@ -18,7 +18,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ genr
       },
     });
 
-    return NextResponse.json(games);
+    return NextResponse.json({ data }, { status: 200 });
   } catch (e) {
     console.log(e);
   }
