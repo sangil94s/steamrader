@@ -33,9 +33,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReactQueryProvider>
-        <Header />
-        {children}
-        <Top />
+          <Header />
+          {children}
+          <Top />
         </ReactQueryProvider>
       </body>
     </html>
