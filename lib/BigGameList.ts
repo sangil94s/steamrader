@@ -152,5 +152,4 @@ export const bigGameAppIds = [
   1903340, //클레르 옵스퀴르: 33 원정대
   305620, //The Long Dark
   282070, //This War of Mine
-
 ];

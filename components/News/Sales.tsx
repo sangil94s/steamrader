@@ -6,7 +6,7 @@ export default function Sales() {
     <>
       <div>
         <p className="text-white text-center font-bold py-4 text-xs lg:text-base">
-          🛒 임박한 할인 일정 - 전쟁 게임 축제 : 4월 28일 - 5월 5일
+          🛒 임박한 할인 일정 - 전쟁 게임 축제 : 4월 28일 - 5월 5일 10시 까지 (PST 기준)
         </p>
       </div>
     </>
