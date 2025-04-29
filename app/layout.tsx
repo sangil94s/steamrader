@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Common/Header';
 import Top from '@/components/Common/Top';
 import ReactQueryProvider from './util/ReactQuery';
 
@@ -23,8 +22,8 @@ export const metadata: Metadata = {
     description: '개인프로젝트로 스팀 대작 게임 할인 정보를 보여줍니다',
   },
   other: {
-    'google-site-verification': 'BBrEoloKrI9hK33Qgu_9Py7BoGyDDPTrmerozCLMQhg'
-  }
+    'google-site-verification': 'BBrEoloKrI9hK33Qgu_9Py7BoGyDDPTrmerozCLMQhg',
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +35,6 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReactQueryProvider>
-          <Header />
           {children}
           <Top />
         </ReactQueryProvider>
