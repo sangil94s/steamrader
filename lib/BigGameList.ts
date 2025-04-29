@@ -144,4 +144,13 @@ export const bigGameAppIds = [
   264710, //Subnautica
   252490, //Rust
   4000, //게리모드
+  976730, // Halo: The Master Chief Collection
+  418370, //BIOHAZARD 7 resident evil
+  1057090, //Ori and the Will of the Wisps
+  367520, //Hollow Knight
+  2161700, //페르소나3 리로드
+  1903340, //클레르 옵스퀴르: 33 원정대
+  305620, //The Long Dark
+  282070, //This War of Mine
+
 ];

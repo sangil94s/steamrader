@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import NoData from '../Common/NoData';
 import { useQuery } from '@tanstack/react-query';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GenreSelect from '../Genres/GenreSelect';
 
 const fetchCardList = async (genres: string | null) => {
