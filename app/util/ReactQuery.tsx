@@ -7,7 +7,7 @@ function ReactQueryProvider({ children }: React.PropsWithChildren) {
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
-        defaultOptions: { queries: { staleTime: 5000 } },
+        defaultOptions: { queries: { staleTime: 60 * 1000 } },
       }),
   );
 
