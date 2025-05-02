@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Steam Rader',
+  title: '2025년 스팀 대작게임 할인 정보',
   description: '스팀 할인 정보를 가져오는 프로젝트',
   openGraph: {
-    title: 'Steam Rader',
+    title: '2025년 스팀 대작게임 할인 정보',
     description: '개인프로젝트로 스팀 대작 게임 할인 정보를 보여줍니다',
   },
   other: {
