@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import NoData from '../Common/NoData';
 import { fetchCardList, DiscountedGame } from '@/app/util/fetchCardList';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function CardListClient() {
   const [selectGenres, setSelectGenres] = useState<string | null>(null);
@@ -21,14 +22,33 @@ export default function CardListClient() {
   return (
     <>
       <GenreSelect onCategoryChange={setSelectGenres} />
+      {isLoading && (
+        <p className="text-white text-center font-bold">
+          {' '}
+          <svg
+            className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin m-auto"
+            viewBox="0 0 24 24"
+          ></svg>
+        </p>
+      )}
       <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3">
         {error && <p className="text-white text-center font-bold">데이터를 불러오는 중 오류 발생: {error.message}</p>}
-        {isLoading && (
-          <p className="text-white text-center font-bold">
-            {' '}
-            <svg className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" viewBox="0 0 24 24"></svg>로딩중..
-          </p>
-        )}
+
+        {isLoading &&
+          Array.from({ length: 9 }).map((_, i) => (
+            <div key={i} className="border border-slate-200 rounded-lg w-max flex items-center gap-4 lg:w-full p-4">
+              <Skeleton className="w-[100px] h-[100px] rounded-2xl" />
+              <div className="flex flex-col gap-2 w-full">
+                <Skeleton className="h-4 w-3/4 mx-auto" />
+                <div className="flex gap-2 justify-center">
+                  <Skeleton className="h-3 w-16" />
+                  <Skeleton className="h-3 w-20" />
+                  <Skeleton className="h-6 w-6 rounded-md" />
+                </div>
+                <Skeleton className="h-3 w-1/2 mx-auto" />
+              </div>
+            </div>
+          ))}
         {data?.data !== undefined
           ? data?.data.map((item: DiscountedGame) => {
               return (

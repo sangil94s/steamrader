@@ -14,7 +14,7 @@ export default function GenreSelect({ onCategoryChange }: FilterProps) {
         전체
       </Badge>
       {categories.map(categoriese => (
-        <Badge className="cursor-pointer" key={categoriese} onClick={() => onCategoryChange(categoriese)}>
+        <Badge className="cursor-pointer mx-1" key={categoriese} onClick={() => onCategoryChange(categoriese)}>
           {categoriese}
         </Badge>
       ))}
