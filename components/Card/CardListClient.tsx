@@ -21,9 +21,14 @@ export default function CardListClient() {
   return (
     <>
       <GenreSelect onCategoryChange={setSelectGenres} />
-      <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-5">
+      <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3">
         {error && <p className="text-white text-center font-bold">데이터를 불러오는 중 오류 발생: {error.message}</p>}
-        {isLoading && <p className="text-white text-center font-bold">로딩중..</p>}
+        {isLoading && (
+          <p className="text-white text-center font-bold">
+            {' '}
+            <svg className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" viewBox="0 0 24 24"></svg>로딩중..
+          </p>
+        )}
         {data?.data !== undefined
           ? data?.data.map((item: DiscountedGame) => {
               return (
@@ -54,7 +59,7 @@ export default function CardListClient() {
                       </Link>
                     </div>
                     <div>
-                      <p className="text-red-600 text-xs text-center py-2">장르 : {item.genres}</p>
+                      <p className="text-red-600 text-xs text-center font-bold py-2">장르 : {item.genres}</p>
                     </div>
                   </section>
                 </div>
