@@ -53,7 +53,7 @@ export default function CardListClient() {
           ? data?.data.map((item: DiscountedGame) => {
               return (
                 <div
-                  className="border border-slate-200 rounded-lg w-max flex items-center gap-4 hover:bg-gray-400 transition lg:w-full"
+                  className="border border-slate-200 rounded-lg w-11/12 flex justify-center items-center gap-4 hover:bg-gray-400 transition lg:w-full"
                   key={item.id}
                 >
                   <Image
@@ -61,7 +61,7 @@ export default function CardListClient() {
                     width={100}
                     height={100}
                     alt="썸네일 이미지"
-                    className="m-3 rounded-2xl object-cover"
+                    className="m-2 rounded-2xl object-cover"
                   />
 
                   <section className="flex flex-col justify-between w-full">
