@@ -6,7 +6,7 @@ export default function Sales() {
     <>
       <div>
         <p className="text-white text-center font-bold py-4 text-xs lg:text-base">
-          🛒 임박한 할인 일정 - 생명체 수집 축제 : 5월 12일 - 5월 19일 10시 까지 (PST 기준)
+          🛒 임박한 할인 일정 - 좀비 대 뱀파이어 게임 축제: 5월 26일~6월 2일 (PST 기준)
         </p>
       </div>
     </>

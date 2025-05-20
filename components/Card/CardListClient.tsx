@@ -31,9 +31,9 @@ export default function CardListClient() {
           ></svg>
         </p>
       )}
+      <p className="text-red-600 text-center font-bold py-2">{data?.data.length}개 의 게임이 할인중이에요!</p>
       <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3">
         {error && <p className="text-white text-center font-bold">데이터를 불러오는 중 오류 발생: {error.message}</p>}
-
         {isLoading &&
           Array.from({ length: 9 }).map((_, i) => (
             <div key={i} className="border border-slate-200 rounded-lg w-max flex items-center gap-4 lg:w-full p-4">
@@ -49,44 +49,43 @@ export default function CardListClient() {
               </div>
             </div>
           ))}
-        {data?.data !== undefined
-          ? data?.data.map((item: DiscountedGame) => {
-              return (
-                <div
-                  className="border border-slate-200 rounded-lg w-11/12 flex justify-center items-center gap-4 hover:bg-gray-400 transition lg:w-full"
-                  key={item.id}
-                >
-                  <Image
-                    src={item.headerImage}
-                    width={100}
-                    height={100}
-                    alt="썸네일 이미지"
-                    className="m-2 rounded-2xl object-cover"
-                  />
+        {data?.data.map((item: DiscountedGame) => {
+          return (
+            <div
+              className="border border-slate-200 rounded-lg w-11/12 flex justify-center items-center gap-4 hover:bg-gray-400 transition lg:w-full"
+              key={item.id}
+            >
+              <Image
+                src={item.headerImage}
+                width={100}
+                height={100}
+                alt="썸네일 이미지"
+                className="m-2 rounded-2xl object-cover"
+              />
 
-                  <section className="flex flex-col justify-between w-full">
-                    <h1 className="text-white text-center font-bold text-sm lg:text-base">{item.name}</h1>
-                    <div className="flex items-center text-sm gap-2 m-auto">
-                      <p className="text-amber-400 text-center font-bold">할인 : {item.discountPercent} % </p>
-                      <p className="text-red-600 text-xs text-center font-bold">가격 : {item.finalFormatted} 원</p>
-                      <Link
-                        href={`https://store.steampowered.com/app/${item.appid}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="스팀 해당 상품 페이지로 이동"
-                      >
-                        <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
-                      </Link>
-                    </div>
-                    <div>
-                      <p className="text-red-600 text-xs text-center font-bold py-2">장르 : {item.genres}</p>
-                    </div>
-                  </section>
+              <section className="flex flex-col justify-between w-full">
+                <h1 className="text-white text-center font-bold text-sm lg:text-base">{item.name}</h1>
+                <div className="flex items-center text-sm gap-2 m-auto">
+                  <p className="text-amber-400 text-center font-bold">할인 : {item.discountPercent} % </p>
+                  <p className="text-red-600 text-xs text-center font-bold">가격 : {item.finalFormatted} 원</p>
+                  <Link
+                    href={`https://store.steampowered.com/app/${item.appid}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="스팀 해당 상품 페이지로 이동"
+                  >
+                    <AiOutlineGlobal className="bg-white rounded-lg cursor-pointer" />
+                  </Link>
                 </div>
-              );
-            })
-          : !isLoading && <NoData />}
+                <div>
+                  <p className="text-red-600 text-xs text-center font-bold py-2">장르 : {item.genres}</p>
+                </div>
+              </section>
+            </div>
+          );
+        })}
       </div>
+      {data?.data.length === 0 && <NoData />} {/* 상품 없을때 Nodata 호출 */}
     </>
   );
 }
